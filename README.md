@@ -170,13 +170,7 @@ Invoke will handle establishing local virtual environments, etc. Task definition
             --role="roles/artifactregistry.repoAdmin"
         ```
 
-## Maintenance & Support
 
-This repo performs basic periodic testing for maintenance. Please use the issue tracker for bug reports, features requests and submitting pull requests.
-
-## Contributions
-
-Please see the [contributing guidelines](CONTRIBUTING.md)
 
 ## License
 
