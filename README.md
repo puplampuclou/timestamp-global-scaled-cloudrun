@@ -2,8 +2,6 @@
 
 Google Cloud Run global scaled container Python3, Golang, Terraform, Artifact registry, bash, Cloud Build, and Cloud Storage Bucket Backend 
 
-[![Run on Google Cloud](https://deploy.cloud.run/button.svg)](https://deploy.cloud.run)
-
 ## Prerequisite
 
 * Cloud Run API build pipeline via the [console](https://console.cloud.google.com/apis/library/run.googleapis.com?_ga=2.124941642.1555267850.1615248624-203055525.1615245957) or CLI:
