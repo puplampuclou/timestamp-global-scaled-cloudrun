@@ -1,18 +1,18 @@
-# Cloud Run Template Microservice
+# Cloud Run Timestamp Application Microservices Global Scale Architecture
 
-A template repository for a Cloud Run microservice, written in Python
+Google Cloud Run global scaled container Python3, Golang, Terraform, Artifact registry, bash, Cloud Build, and Cloud Storage Bucket Backend 
 
 [![Run on Google Cloud](https://deploy.cloud.run/button.svg)](https://deploy.cloud.run)
 
 ## Prerequisite
 
-* Enable the Cloud Run API via the [console](https://console.cloud.google.com/apis/library/run.googleapis.com?_ga=2.124941642.1555267850.1615248624-203055525.1615245957) or CLI:
+* Cloud Run API build pipeline via the [console](https://console.cloud.google.com/apis/library/run.googleapis.com?_ga=2.124941642.1555267850.1615248624-203055525.1615245957) or CLI:
 
 ```bash
 gcloud services enable run.googleapis.com
 ```
 
-## Features
+## Application Stack
 
 * **Flask**: Web server framework
 * **Buildpack support** Tooling to build production-ready container images from source code and without a Dockerfile
@@ -28,10 +28,10 @@ gcloud services enable run.googleapis.com
 
 ### Cloud Code
 
-This template works with [Cloud Code](https://cloud.google.com/code), an IDE extension
+Repository code reference sources: [Cloud Code](https://cloud.google.com/code), an IDE extension
 to let you rapidly iterate, debug, and run code on Kubernetes and Cloud Run.
 
-Learn how to use Cloud Code for:
+Google Cloud Code for:
 
 * Local development - [VSCode](https://cloud.google.com/code/docs/vscode/developing-a-cloud-run-service), [IntelliJ](https://cloud.google.com/code/docs/intellij/developing-a-cloud-run-service)
 
@@ -40,7 +40,7 @@ Learn how to use Cloud Code for:
 * Deploying a Cloud Run service - [VSCode](https://cloud.google.com/code/docs/vscode/deploying-a-cloud-run-service), [IntelliJ](https://cloud.google.com/code/docs/intellij/deploying-a-cloud-run-service)
 * Creating a new application from a custom template (`.template/templates.json` allows for use as an app template) - [VSCode](https://cloud.google.com/code/docs/vscode/create-app-from-custom-template), [IntelliJ](https://cloud.google.com/code/docs/intellij/create-app-from-custom-template)
 
-### CLI tooling
+### CLI Instructions
 
 To run the `invoke` commands below, install [`invoke`](https://www.pyinvoke.org/index.html) system wide: 
 
@@ -61,7 +61,7 @@ Invoke will handle establishing local virtual environments, etc. Task definition
     invoke dev
     ```
 
-#### Deploying a Cloud Run service
+#### Instructions to deploy the Cloud Run service
 
 1. Set Project Id:
     ```bash
