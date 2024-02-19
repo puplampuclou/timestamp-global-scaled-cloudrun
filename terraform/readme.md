@@ -1,3 +1,19 @@
+The purpose of this project was to design and deploy a timestamp generator that updates a storage object in a storage bucket, every 10 minutes, and that timestamp 
+
+be available to the web for your viewing.
+
+HTTP PORT 80 URL:  http://34.147.3.6/
+
+HTTPS/TLS/SSL PORT 443 URL: https://timestamps.puplampu.me/
+
+HTTP PORT 80 URL:  http://34.147.3.6/timestamps.html
+
+HTTPS/TLS/SSL PORT 443 URL: https://timestamps.puplampu.me/timestamps.html
+
+GitHub Repo of Terraform Code:  https://github.com/puplampuclou/timestamp-global-scaled-cloudrun/edit/main/terraform/main.tf
+
+STATUS:  COMPLETE
+
 Provide a diagram of the above implementation:
 
 ● Provide Terraform code in a git repository to manage the above implementation.
