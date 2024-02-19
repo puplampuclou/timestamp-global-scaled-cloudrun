@@ -1,6 +1,9 @@
 Provide a diagram of the above implementation:
+
 ● Provide Terraform code in a git repository to manage the above implementation.
+
 ○ Ensure README contains:
+
 ■ Description of repo folders/structure
 
 ■ deployment instructions and dependencies
