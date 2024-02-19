@@ -39,7 +39,7 @@ timestamps.sh
 
 The timestamps.sh file is to be uploaded or created in the web server and be the trigger point for a crontab entry to execute every 10 minuites.
 
-It executes the actual updates, all in one stroke, every 10 minuites it does the following:
+It executes the actual updates every 10 minuites it does the following:
 1.	Runs the date command.
 2.	Writes that value to the local timestamps.html file.  
 3.	Copies over that file to the /var/www/html/ directory.
