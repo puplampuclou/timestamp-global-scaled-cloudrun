@@ -24,14 +24,22 @@ This README contains:
 Prerequisite:
 1. Github Oauth Integration with Terraform Cloud Workspace:  https://developer.hashicorp.com/terraform/tutorials/cloud/github-oauth
 2. Terraform Cloud Integration with Google Cloud API: https://registry.terraform.io/providers/hashicorp/google/latest/docs/guides/provider_reference
+
 Files:
+
 main.tf
+
+The main.tf file whenever updated or changed, when configured with Terraform cloud kicks off a plan staging run to look for errors and issues.  This particular file builds the CKEM keyring, key, storage bucket and vm-instance web server.
 
 provider.tf
 
+The provider.tf file tells terraform cloud to use the Google Terraform API provider module.
+
 timestamps.sh
 
-This is the bash script is to be placed in the home directory of the http server.  It executes the actual updates, all in one stroke, every 10 minuites it does the following:
+The timestamps.sh file is to be uploaded or created in the web server and be the trigger point for a crontab entry to execute every 10 minuites.
+
+It executes the actual updates, all in one stroke, every 10 minuites it does the following:
 1.	Runs the date command.
 2.	Writes that value to the local timestamps.html file.  
 3.	Copies over that file to the /var/www/html/ directory.
