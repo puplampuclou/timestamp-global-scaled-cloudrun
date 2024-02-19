@@ -10,7 +10,7 @@ HTTP PORT 80 URL:  http://34.147.3.6/timestamps.html
 
 HTTPS/TLS/SSL PORT 443 URL: https://timestamps.puplampu.me/timestamps.html
 
-GitHub Repo of Terraform Code:  https://github.com/puplampuclou/timestamp-global-scaled-cloudrun/edit/main/terraform/main.tf
+GitHub Repo of Terraform Code:  https://github.com/puplampuclou/timestamp-global-scaled-cloudrun/edit/main/terraform/
 
 STATUS:  COMPLETE
 
