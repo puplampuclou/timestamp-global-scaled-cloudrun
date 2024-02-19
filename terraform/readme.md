@@ -16,7 +16,7 @@ GitHub Repo of the Cloud Run Global Scaled Deployment Timestamp Solution:  https
 
 STATUS:  COMPLETE
 
-Provide a diagram of the above implementation:
+■ Provide a diagram of the above implementation:
 
 This README contains:
 
@@ -27,17 +27,17 @@ Prerequisite:
 1. Github Oauth Integration with Terraform Cloud Workspace:  https://developer.hashicorp.com/terraform/tutorials/cloud/github-oauth
 2. Terraform Cloud Integration with Google Cloud API: https://registry.terraform.io/providers/hashicorp/google/latest/docs/guides/provider_reference
 
-Files:
+■ Files:
 
-main.tf
+■ main.tf
 
 The main.tf file whenever updated or changed, when configured with Terraform cloud kicks off a plan staging run to look for errors and issues.  This particular file builds the CKEM keyring, key, storage bucket and vm-instance web server.
 
-provider.tf
+■ provider.tf
 
 The provider.tf file tells terraform cloud to use the Google Terraform API provider module.
 
-timestamps.sh
+■ timestamps.sh
 
 The timestamps.sh file is to be uploaded or created in the web server and be the trigger point for a crontab entry to execute every 10 minuites.
 
@@ -69,9 +69,9 @@ I believe the answer to this question will depend on your traffic and usage patt
 ○ How the implementation complies with best practices (AWS Well Architected
 Framework or Google Cloud Architecture Framework.):  
 
-My solution recommendation addresses all 11 of both Amazon and Google pillars of architecture best practices.  
+■ My solution recommendation addresses all 11 of both Amazon and Google pillars of architecture best practices.  
 
-Amazon 5 pillars: Security, Reliability, Performance, Efficiency, Cost Optimization	
+■ Amazon 5 pillars: Security, Reliability, Performance, Efficiency, Cost Optimization	
 
-Google 6 pillars: System design, Security, Privacy & Compliance, Reliability, Performance, Cost Optimization
+■ Google 6 pillars: System design, Security, Privacy & Compliance, Reliability, Performance, Cost Optimization
 
