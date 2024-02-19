@@ -48,6 +48,9 @@ It executes the actual updates every 10 minuites it does the following:
 
 ■ Tear-down instructions
 
+In order to tear everything down, you simply delete the main.tf files and run the pipeline apply to complete the removal of all devices this particular tf file created.
+
+
 ○ Why the services/components were chosen over alternatives.
 
 ○ How the cost of the implementation scales as traffic increases.
