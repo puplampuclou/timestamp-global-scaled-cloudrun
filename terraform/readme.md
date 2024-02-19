@@ -12,6 +12,8 @@ HTTPS/TLS/SSL PORT 443 URL: https://timestamps.puplampu.me/timestamps.html
 
 GitHub Repo of Terraform Code:  https://github.com/puplampuclou/timestamp-global-scaled-cloudrun/edit/main/terraform/
 
+GitHub Repo of the Cloud Run Global Scaled Deployment Timestamp Solution:  https://github.com/puplampuclou/timestamp-global-scaled-cloudrun/tree/main
+
 STATUS:  COMPLETE
 
 Provide a diagram of the above implementation:
