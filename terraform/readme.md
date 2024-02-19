@@ -16,13 +16,27 @@ STATUS:  COMPLETE
 
 Provide a diagram of the above implementation:
 
-● Provide Terraform code in a git repository to manage the above implementation.
+This README contains:
 
-○ Ensure README contains:
-
-■ Description of repo folders/structure
+■ Description of repo folders/structure:  This is a single folder respository with two terraform files, the main.tf and the provider.tf files, which are all you need to deploy the storage bucket and server to Google Cloud.
 
 ■ deployment instructions and dependencies
+Prerequisite:
+1. Github Oauth Integration with Terraform Cloud Workspace:  https://developer.hashicorp.com/terraform/tutorials/cloud/github-oauth
+2. Terraform Cloud Integration with Google Cloud API: https://registry.terraform.io/providers/hashicorp/google/latest/docs/guides/provider_reference
+Files:
+main.tf
+
+provider.tf
+
+timestamps.sh
+
+This is the bash script is to be placed in the home directory of the http server.  It executes the actual updates, all in one stroke, every 10 minuites it does the following:
+1.	Runs the date command.
+2.	Writes that value to the local timestamps.html file.  
+3.	Copies over that file to the /var/www/html/ directory.
+4.	Pushes said update to the custom-time.txt object in the storage bucket.
+
 
 ■ Tear-down instructions
 
