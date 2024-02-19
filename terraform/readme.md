@@ -51,13 +51,25 @@ It executes the actual updates every 10 minuites it does the following:
 In order to tear everything down, you simply delete the main.tf files and run the pipeline apply to complete the removal of all devices this particular tf file created.
 
 
-○ Why the services/components were chosen over alternatives.
+○ Why the services/components were chosen over alternatives:  I chose Google Cloud because I know it better and I believe it is more secure and has better quality services.
 
-○ How the cost of the implementation scales as traffic increases.
+○ How the cost of the implementation scales as traffic increases:  The cost will vary between these two main factors:
 
-○ How to monitor the implementation for availability and performance.
+1. Dedicated infrastructure, gke or instance groups will have a higher cost regardless of how much traffic, and when deployed at scale in different regions, will be a significant fixed monthly cost.  However, this increased fixed monthly costs has lower usage, traffic and peak volume cost.
 
-○ How to recover from a regional disaster and impact to end users.
+2.  Serverless event driven architected solutions have a low fixed monthly cost, and most of your infrastructure is not running when there is no traffic.  However, when there are occasional peaks, this solution shines.  However, when you have a consistently high levels of daily traffic and usage, you pay a premium.
+I believe the answer to this question will depend on your traffic and usage patturns.  Consistently guaranteed amount of traffic should be deployed on dedicated infrastructure and for excess and occasional peak traffic, this sould be leveraged on event-driven traffic.
+
+○ How to monitor the implementation for availability and performance:  Google Cloud Monitoring, Splunk, Dynatrace, and Elastistach are all options that depending on how you use them, negotiate licensing costs and architect it, can all be provide good value at good pricepoints.
+
+○ How to recover from a regional disaster and impact to end users:  Both the event-driven and gke based solutions can be deployed and designed with strong site reliability and security in mind.  With that architecture in place, by designing solutions in more than one region, with global load balancing, intelligent cdn caching, regular backups, properly planned upgrade/maintenance and traffic/utilization optimization planning, a regional disaster recovery should bed as easy as a click of a few pre-configured fail-over automation tools.
 
 ○ How the implementation complies with best practices (AWS Well Architected
-Framework or Google Cloud Architecture Framework.)
+Framework or Google Cloud Architecture Framework.):  
+
+My solution recommendation addresses all 11 of both Amazon and Google pillars of architecture best practices.  
+
+Amazon 5 pillars: Security, Reliability, Performance, Efficiency, Cost Optimization	
+
+Google 6 pillars: System design, Security, Privacy & Compliance, Reliability, Performance, Cost Optimization
+
