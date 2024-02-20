@@ -2,6 +2,9 @@
 
 Google Cloud Run global scaled container Python3, Golang, Terraform, Artifact registry, bash, Cloud Build, and Cloud Storage Bucket Backend 
 
+<b>PLEASE NOTE: The actual readme for whats deployed is https://github.com/puplampuclou/timestamp-global-scaled-cloudrun/tree/main/terraform
+This readme describes a global scaled container based version of this exercise.</b>
+
 ## Prerequisite
 
 * Cloud Run API build pipeline via the [console](https://console.cloud.google.com/apis/library/run.googleapis.com?_ga=2.124941642.1555267850.1615248624-203055525.1615245957) or CLI:
