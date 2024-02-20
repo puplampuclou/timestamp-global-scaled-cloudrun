@@ -20,6 +20,31 @@ be available to the web for your viewing.
 
 ■ Provide a diagram of the above implementation:
 
+                                +-----------------+
+                                |  Internet       |
+                                +-----------------+
+                                           |
+                                           |
+                                           v
+                                +-----------------+
+                                | Firewall and    |
+                                | NAT             |
+                                +-----------------+
+                                           |
+                                           |
+                                           v
+                                +-----------------+
+                                | Compute Engine  |
+                                |     VM          |
+                                | (Web Server)    |
+                                +-----------------+
+                                           |
+                                           |
+                                           v
+                                +-----------------+
+                                | Cloud Storage   |
+                                |      Bucket     |
+                                +-----------------+
 <b>This README contains:</b>
 
 ■ <b>Description of repo folders/structure:</b>  This is a single folder respository with two terraform files, the main.tf and the provider.tf files, which are all you need to deploy the storage bucket and server to Google Cloud.  This is not the folder or repo that I have integrated with Terraform Cloud Workspaces.  This is a copy of the files in the private gcp-puplampu repository https://github.com/puplampuclou/gcp-puplampu that I have authenticated and directly integrated with Terraoform Cloud CI/CD pipeline.  All of the otherwise local dependencies and versioning is not necessary or allowed in this directory, as its all managed remotely by TFC.  This decision was made as its easier to maintain, is more table and more aligned with how an enterprise repository CI/CD Pipeline would be setup.  Access granted upon request.
