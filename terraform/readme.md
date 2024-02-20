@@ -6,21 +6,21 @@ be available to the web for your viewing.
 
 <b>HTTP PORT 80 URL:</b>  http://34.147.3.6/
 
-HTTPS/TLS/SSL PORT 443 URL: https://timestamps.puplampu.me/
+<b>HTTPS/TLS/SSL PORT 443 URL:</b> https://timestamps.puplampu.me/
 
-HTTP PORT 80 URL:  http://34.147.3.6/timestamps.html
+<b>HTTP PORT 80 URL:</b>  http://34.147.3.6/timestamps.html
 
-HTTPS/TLS/SSL PORT 443 URL: https://timestamps.puplampu.me/timestamps.html
+<b>HTTPS/TLS/SSL PORT 443 URL:</b> https://timestamps.puplampu.me/timestamps.html
 
-GitHub Repo of Terraform Code:  https://github.com/puplampuclou/timestamp-global-scaled-cloudrun/edit/main/terraform/
+<b>GitHub Repo of Terraform Code:</b>  https://github.com/puplampuclou/timestamp-global-scaled-cloudrun/edit/main/terraform/
 
-GitHub Repo of the Cloud Run Global Scaled Deployment Timestamp Solution:  https://github.com/puplampuclou/timestamp-global-scaled-cloudrun/tree/main
+<b>GitHub Repo of the Cloud Run Global Scaled Deployment Timestamp Solution:</b>  https://github.com/puplampuclou/timestamp-global-scaled-cloudrun/tree/main
 
-STATUS:  COMPLETE
+<b>STATUS:</b>  COMPLETE
 
 ■ Provide a diagram of the above implementation:
 
-This README contains:
+<b>This README contains:</b>
 
 ■ Description of repo folders/structure:  This is a single folder respository with two terraform files, the main.tf and the provider.tf files, which are all you need to deploy the storage bucket and server to Google Cloud.  This is not the folder or repo that I have integrated with Terraform Cloud Workspaces.  This is a copy of the files in the private gcp-puplampu repository https://github.com/puplampuclou/gcp-puplampu that I have authenticated and directly integrated with Terraoform Cloud CI/CD pipeline.  All of the otherwise local dependencies and versioning is not necessary or allowed in this directory, as its all managed remotely by TFC.  This decision was made as its easier to maintain, is more table and more aligned with how an enterprise repository CI/CD Pipeline would be setup.  Access granted upon request.
 
@@ -53,25 +53,25 @@ It executes the actual updates every 10 minuites it does the following:
 
 In order to tear everything down, you simply delete the content in the main.tf file (NOTE:  NOT THE FILE ITSELF) and run the pipeline apply to complete the removal of all devices this particular tf file created.
 
-○ Why the services/components were chosen over alternatives:  I chose Google Cloud because I know it them well and I believe it is more secure and has better quality services.  I chose to use Terraform Cloud because it is very secure, you don't have to save any credentials, or key variables, or variable files locally in the repo (ssl, certs and service account json keys are all stored in a TFC variable secured key vault) 
+<b>○ Why the services/components were chosen over alternatives:</b>  I chose Google Cloud because I know it them well and I believe it is more secure and has better quality services.  I chose to use Terraform Cloud because it is very secure, you don't have to save any credentials, or key variables, or variable files locally in the repo (ssl, certs and service account json keys are all stored in a TFC variable secured key vault) 
 
-○ How the cost of the implementation scales as traffic increases:  The cost will vary between these two main factors:
+<b>○ How the cost of the implementation scales as traffic increases:</b>  The cost will vary between these two main factors:
 
 1. Dedicated infrastructure, gke or instance groups will have a higher cost regardless of how much traffic, and when deployed at scale in different regions, will be a significant fixed monthly cost.  However, this increased fixed monthly costs has lower usage, traffic and peak volume cost.
 
 2.  Serverless event driven architected solutions have a low fixed monthly cost, and most of your infrastructure is not running when there is no traffic.  However, when there are occasional peaks, this solution shines.  However, when you have a consistently high levels of daily traffic and usage, you pay a premium.
 I believe the answer to this question will depend on your traffic and usage patturns.  Consistently guaranteed amount of traffic should be deployed on dedicated infrastructure and for excess and occasional peak traffic, this sould be leveraged on event-driven traffic.
 
-○ How to monitor the implementation for availability and performance:  Google Cloud Monitoring, Splunk, Dynatrace, and Elastistach are all options that depending on how you use them, negotiate licensing costs and architect it, can all be provide good value at good pricepoints.
+<b>○ How to monitor the implementation for availability and performance:</b>  Google Cloud Monitoring, Splunk, Dynatrace, and Elastistach are all options that depending on how you use them, negotiate licensing costs and architect it, can all be provide good value at good pricepoints.
 
-○ How to recover from a regional disaster and impact to end users:  Both the event-driven, gke or a combination of both, they can be deployed and designed with multi-region redundancy, strong site reliability and security best practices will ensure a high level or resiliance.  With SRE/Security best practices architecture in place, with global load balancing, intelligent cdn caching, regular backups, monitoring, properly planned upgrade/maintenance SOPs and traffic/utilization optimization planning, a disaster recovery process should be as easy as a click of a few pre-configured fail-over automation tools.
+<b>○ How to recover from a regional disaster and impact to end users:</b>  Both the event-driven, gke or a combination of both, they can be deployed and designed with multi-region redundancy, strong site reliability and security best practices will ensure a high level or resiliance.  With SRE/Security best practices architecture in place, with global load balancing, intelligent cdn caching, regular backups, monitoring, properly planned upgrade/maintenance SOPs and traffic/utilization optimization planning, a disaster recovery process should be as easy as a click of a few pre-configured fail-over automation tools.
 
-○ How the implementation complies with best practices (AWS Well Architected
-Framework or Google Cloud Architecture Framework.):  
+<b>○ How the implementation complies with best practices (AWS Well Architected
+Framework or Google Cloud Architecture Framework.):</b>  
 
 ■ My solution recommendation addresses all 11 of both Amazon and Google pillars of architecture best practices.  
 
-■ Amazon 5 pillars: Security, Reliability, Performance, Efficiency, Cost Optimization	
+■ <b>Amazon 5 pillars:</b> Security, Reliability, Performance, Efficiency, Cost Optimization	
 
-■ Google 6 pillars: System design, Security, Privacy & Compliance, Reliability, Performance, Cost Optimization
+■ <b>Google 6 pillars:</b> System design, Security, Privacy & Compliance, Reliability, Performance, Cost Optimization
 
