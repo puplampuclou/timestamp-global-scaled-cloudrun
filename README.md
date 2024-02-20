@@ -5,6 +5,7 @@ Google Cloud Run global scaled container Python3, Golang, Terraform, Artifact re
 <b>PLEASE NOTE: The actual readme for whats deployed is https://github.com/puplampuclou/timestamp-global-scaled-cloudrun/tree/main/terraform
 This readme describes a global scaled container based version of this exercise.</b>
 The purpose of this exercise was to design and deploy a timestamp generator that updates a storage object in a storage bucket, every 10 minutes, and that timestamp 
+be available via curl and browser.
 
 The following web links are available for your viewing.
 
