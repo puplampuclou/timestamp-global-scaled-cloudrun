@@ -4,6 +4,51 @@ Google Cloud Run global scaled container Python3, Golang, Terraform, Artifact re
 
 <b>PLEASE NOTE: The actual readme for whats deployed is https://github.com/puplampuclou/timestamp-global-scaled-cloudrun/tree/main/terraform
 This readme describes a global scaled container based version of this exercise.</b>
+The purpose of this exercise was to design and deploy a timestamp generator that updates a storage object in a storage bucket, every 10 minutes, and that timestamp 
+
+be available to the web for your viewing.
+
+<b>HTTP PORT 80 URL:</b>  http://34.147.3.6/
+
+<b>HTTPS/TLS/SSL PORT 443 URL:</b> https://timestamps.puplampu.me/
+
+<b>HTTP PORT 80 URL:</b>  http://34.147.3.6/timestamps.html
+
+<b>HTTPS/TLS/SSL PORT 443 URL:</b> https://timestamps.puplampu.me/timestamps.html
+
+<b>GitHub Repo of Terraform Code:</b>  https://github.com/puplampuclou/timestamp-global-scaled-cloudrun/edit/main/terraform/
+
+<b>GitHub Repo of the Cloud Run Global Scaled Deployment Timestamp Solution:</b>  https://github.com/puplampuclou/timestamp-global-scaled-cloudrun/tree/main
+
+<b>STATUS:</b>  COMPLETE
+
+■ Diagram of the above implementation:
+
+                                +-----------------+
+                                |  Internet       |
+                                +-----------------+
+                                           |
+                                           |
+                                           v
+                                +-----------------+
+                                | Firewall and    |
+                                | NAT             |
+                                +-----------------+
+                                           |
+                                           |
+                                           v
+                                +-----------------+
+                                | Compute Engine  |
+                                |     VM          |
+                                | (Web Server)    |
+                                +-----------------+
+                                           |
+                                           |
+                                           v
+                                +-----------------+
+                                | Cloud Storage   |
+                                |      Bucket     |
+                                +-----------------+
 
 ## Prerequisite
 
