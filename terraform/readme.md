@@ -1,8 +1,10 @@
+<h1><b>Google Cloud Platform, GitHub, and Terraform Cloud CI/CD Pipeline Timestamp Exercise Deployment ReadMe</b></h1>
+
 The purpose of this project was to design and deploy a timestamp generator that updates a storage object in a storage bucket, every 10 minutes, and that timestamp 
 
 be available to the web for your viewing.
 
-HTTP PORT 80 URL:  http://34.147.3.6/
+<b>HTTP PORT 80 URL:</b>  http://34.147.3.6/
 
 HTTPS/TLS/SSL PORT 443 URL: https://timestamps.puplampu.me/
 
