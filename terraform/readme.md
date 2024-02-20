@@ -2,7 +2,7 @@
 
 The purpose of this exercise was to design and deploy a timestamp generator that updates a storage object in a storage bucket, every 10 minutes, and that timestamp 
 
-be available to the web for your viewing.
+The following web links are available for your viewing.
 
 <b>HTTP PORT 80 URL:</b>  http://34.147.3.6/
 
