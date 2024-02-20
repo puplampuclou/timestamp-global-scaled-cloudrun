@@ -18,7 +18,7 @@ be available to the web for your viewing.
 
 <b>STATUS:</b>  COMPLETE
 
-■ Provide a diagram of the above implementation:
+■ Diagram of the above implementation:
 
                                 +-----------------+
                                 |  Internet       |
