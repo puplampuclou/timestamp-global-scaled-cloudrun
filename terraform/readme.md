@@ -1,6 +1,6 @@
 <h1><b>Google Cloud Platform, GitHub, and Terraform Cloud CI/CD Pipeline Timestamp Exercise Deployment ReadMe</b></h1>
 
-The purpose of this project was to design and deploy a timestamp generator that updates a storage object in a storage bucket, every 10 minutes, and that timestamp 
+The purpose of this exercise was to design and deploy a timestamp generator that updates a storage object in a storage bucket, every 10 minutes, and that timestamp 
 
 be available to the web for your viewing.
 
