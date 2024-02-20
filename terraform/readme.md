@@ -22,14 +22,14 @@ be available to the web for your viewing.
 
 <b>This README contains:</b>
 
-■ Description of repo folders/structure:  This is a single folder respository with two terraform files, the main.tf and the provider.tf files, which are all you need to deploy the storage bucket and server to Google Cloud.  This is not the folder or repo that I have integrated with Terraform Cloud Workspaces.  This is a copy of the files in the private gcp-puplampu repository https://github.com/puplampuclou/gcp-puplampu that I have authenticated and directly integrated with Terraoform Cloud CI/CD pipeline.  All of the otherwise local dependencies and versioning is not necessary or allowed in this directory, as its all managed remotely by TFC.  This decision was made as its easier to maintain, is more table and more aligned with how an enterprise repository CI/CD Pipeline would be setup.  Access granted upon request.
+■ <b>Description of repo folders/structure:</b>  This is a single folder respository with two terraform files, the main.tf and the provider.tf files, which are all you need to deploy the storage bucket and server to Google Cloud.  This is not the folder or repo that I have integrated with Terraform Cloud Workspaces.  This is a copy of the files in the private gcp-puplampu repository https://github.com/puplampuclou/gcp-puplampu that I have authenticated and directly integrated with Terraoform Cloud CI/CD pipeline.  All of the otherwise local dependencies and versioning is not necessary or allowed in this directory, as its all managed remotely by TFC.  This decision was made as its easier to maintain, is more table and more aligned with how an enterprise repository CI/CD Pipeline would be setup.  Access granted upon request.
 
-■ deployment instructions and dependencies
-Prerequisite:
+■ <b>Deployment instructions and dependencies
+Prerequisite:</b>
 1. Github Oauth Integration with Terraform Cloud Workspace:  https://developer.hashicorp.com/terraform/tutorials/cloud/github-oauth
 2. Terraform Cloud Integration with Google Cloud API: https://registry.terraform.io/providers/hashicorp/google/latest/docs/guides/provider_reference
 
-■ Files:
+■ <b>Files:</b>
 
 ■ main.tf
 
@@ -49,7 +49,7 @@ It executes the actual updates every 10 minuites it does the following:
 3.	Copies over that file to the /var/www/html/ directory.
 4.	Pushes said update to the custom-time.txt object in the storage bucket.
 
-■ Tear-down instructions
+■ <b>Tear-down instructions</b>
 
 In order to tear everything down, you simply delete the content in the main.tf file (NOTE:  NOT THE FILE ITSELF) and run the pipeline apply to complete the removal of all devices this particular tf file created.
 
