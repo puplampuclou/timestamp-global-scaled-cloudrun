@@ -20,7 +20,7 @@ STATUS:  COMPLETE
 
 This README contains:
 
-■ Description of repo folders/structure:  This is a single folder respository with two terraform files, the main.tf and the provider.tf files, which are all you need to deploy the storage bucket and server to Google Cloud.
+■ Description of repo folders/structure:  This is a single folder respository with two terraform files, the main.tf and the provider.tf files, which are all you need to deploy the storage bucket and server to Google Cloud.  This is not the folder or repo that I have integrated with Terraform Cloud Workspaces.  This is a copy of the files in the private gcp-puplampu repository https://github.com/puplampuclou/gcp-puplampu that I have authenticated and directly integrated with Terraoform Cloud CI/CD pipeline.  All of the otherwise local dependencies and versioning is not necessary or allowed in this directory, as its all managed remotely by TFC.  This decision was made as its easier to maintain, is more table and more aligned with how an enterprise repository CI/CD Pipeline would be setup.  Access granted upon request.
 
 ■ deployment instructions and dependencies
 Prerequisite:
@@ -31,15 +31,15 @@ Prerequisite:
 
 ■ main.tf
 
-The main.tf file whenever updated or changed, when configured with Terraform cloud kicks off a plan staging run to look for errors and issues.  This particular file builds the CKEM keyring, key, storage bucket and vm-instance web server.
+The main.tf file whenever updated or changed, when configured with Terraform cloud kicks off a plan staging run to look for errors and issues.  This particular file builds the CKEM keyring, key, storage bucket and vm-instance web server.  Imlemented remotely by TCF.
 
 ■ provider.tf
 
-The provider.tf file tells terraform cloud to use the Google Terraform API provider module.
+The provider.tf file tells terraform cloud to use the Google Terraform API provider module, managed remotely by TCF.
 
 ■ timestamps.sh
 
-The timestamps.sh file is to be uploaded or created in the web server and be the trigger point for a crontab entry to execute every 10 minuites.
+The timestamps.sh file is NOT USED BY TCF, just in the directory to deploy to target http server post deployment. It is to be uploaded or created in the web server and be the trigger point for a crontab entry to execute every 10 minuites once the server is built.
 
 It executes the actual updates every 10 minuites it does the following:
 1.	Runs the date command.
@@ -47,13 +47,11 @@ It executes the actual updates every 10 minuites it does the following:
 3.	Copies over that file to the /var/www/html/ directory.
 4.	Pushes said update to the custom-time.txt object in the storage bucket.
 
-
 ■ Tear-down instructions
 
-In order to tear everything down, you simply delete the main.tf files and run the pipeline apply to complete the removal of all devices this particular tf file created.
+In order to tear everything down, you simply delete the content in the main.tf file (NOTE:  NOT THE FILE ITSELF) and run the pipeline apply to complete the removal of all devices this particular tf file created.
 
-
-○ Why the services/components were chosen over alternatives:  I chose Google Cloud because I know it better and I believe it is more secure and has better quality services.
+○ Why the services/components were chosen over alternatives:  I chose Google Cloud because I know it them well and I believe it is more secure and has better quality services.  I chose to use Terraform Cloud because it is very secure, you don't have to save any credentials, or key variables, or variable files locally in the repo (ssl, certs and service account json keys are all stored in a TFC variable secured key vault) 
 
 ○ How the cost of the implementation scales as traffic increases:  The cost will vary between these two main factors:
 
