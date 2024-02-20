@@ -62,7 +62,7 @@ I believe the answer to this question will depend on your traffic and usage patt
 
 ○ How to monitor the implementation for availability and performance:  Google Cloud Monitoring, Splunk, Dynatrace, and Elastistach are all options that depending on how you use them, negotiate licensing costs and architect it, can all be provide good value at good pricepoints.
 
-○ How to recover from a regional disaster and impact to end users:  Both the event-driven and gke based solutions can be deployed and designed with strong site reliability and security in mind.  With that architecture in place, by designing solutions in more than one region, with global load balancing, intelligent cdn caching, regular backups, properly planned upgrade/maintenance and traffic/utilization optimization planning, a regional disaster recovery should bed as easy as a click of a few pre-configured fail-over automation tools.
+○ How to recover from a regional disaster and impact to end users:  Both the event-driven, gke or a combination of both, they can be deployed and designed with multi-region redundancy, strong site reliability and security best practices will ensure a high level or resiliance.  With SRE/Security best practices architecture in place, with global load balancing, intelligent cdn caching, regular backups, monitoring, properly planned upgrade/maintenance SOPs and traffic/utilization optimization planning, a disaster recovery process should be as easy as a click of a few pre-configured fail-over automation tools.
 
 ○ How the implementation complies with best practices (AWS Well Architected
 Framework or Google Cloud Architecture Framework.):  
