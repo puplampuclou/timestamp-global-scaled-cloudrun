@@ -11,5 +11,5 @@ provider "google" {
   # Configuration options
   project     = "puplampu-inc-project01"
   region      = "us-central1"
-  zone		  = "us-central-a"
+  zone		  = "us-central1-a"
 }
